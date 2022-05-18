@@ -1,0 +1,39 @@
+@use "@styles/styles.scss" as *;
+
+.searchMovies {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.listMovie {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  grid-gap: 15px;
+
+  margin-top: 24px;
+
+  &_image {
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+}
+
+.arrow {
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  margin-top: 20px;
+  color: $purple-dark-1;
+  font-weight: $font-weight-title1;
+}
+
+.showmore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
