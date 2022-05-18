@@ -1,0 +1,40 @@
+@use "@styles/styles.scss" as *;
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 5rem;
+  margin-top: 1.6rem;
+
+  &_input {
+    width: 100%;
+    height: 100%;
+    padding-left: 1.6rem;
+    background-color: $purple-light-2;
+    border: none;
+    border-radius: 8px 0px 0px 8px;
+    color: $purple-medium-2;
+    font-size: 1.9rem;
+  }
+  &_input::placeholder {
+    color: $purple-medium-1;
+    font-weight: $font-weight-text1;
+  }
+
+  &_button {
+    display: flexbox;
+    place-items: center;
+    width: 20%;
+    height: 100%;
+    max-width: 60px;
+    border: 0;
+    background: $purple-dark-1;
+    border-radius: 0px 8px 8px 0px;
+  }
+  &_icon {
+    width: 50%;
+    height: 50%;
+  }
+}
