@@ -1,21 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Button } from "@elements/Button";
+import { useGetMovies } from "@hooks/useGetData";
+import { Movie } from "@components/movie";
 
 import styles from "./styles.module.scss";
 
 export const Carousel = ({ button, title }) => {
-  const [trends, setTrends] = useState([]);
-  useEffect(() => {
-    const fetchTrends = async () => {
-      const response = await fetch(
-        `https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.REACT_APP_API_KEY}`
-      );
-      const data = await response.json();
-      setTrends(data.results);
-    };
-    fetchTrends();
-  }, []);
-
+  const URL = `trending/movie/day`;
+  const [dataMovies] = useGetMovies(URL);
+  console.log(dataMovies);
   return (
     <>
       <div className={styles.container}>
@@ -23,13 +16,8 @@ export const Carousel = ({ button, title }) => {
         {button ? <Button>Show more</Button> : null}
       </div>
       <figure className={styles.carousel}>
-        {trends.map((trend) => (
-          <img
-            key={trend.id}
-            src={`https://image.tmdb.org/t/p/w200/${trend.poster_path}`}
-            className={styles.carousel_image}
-            alt={trend.title}
-          />
+        {dataMovies.map((trend) => (
+          <Movie key={trend.id} {...trend} />
         ))}
       </figure>
     </>
