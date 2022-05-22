@@ -6,7 +6,8 @@
   justify-content: center;
   width: 100%;
   height: 5rem;
-  margin-top: 1.6rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
 
   &_input {
     width: 100%;
@@ -15,6 +16,7 @@
     background-color: $purple-light-2;
     border: none;
     border-radius: 8px 0px 0px 8px;
+    outline: none;
     color: $purple-medium-2;
     font-size: 1.9rem;
   }
@@ -32,6 +34,7 @@
     border: 0;
     background: $purple-dark-1;
     border-radius: 0px 8px 8px 0px;
+    cursor: pointer;
   }
   &_icon {
     width: 50%;
