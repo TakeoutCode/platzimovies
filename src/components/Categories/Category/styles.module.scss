@@ -1,0 +1,25 @@
+@use "@styles/styles.scss" as *;
+
+.category {
+  display: flex;
+  align-items: center;
+
+  &_icon {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 12px;
+    border-radius: 8px;
+  }
+
+  &_title {
+    color: $purple-dark-2;
+    font-size: 1.6rem;
+    font-weight: $font-weight-text2;
+  }
+}
+
+#title {
+  color: $purple-dark-2;
+  font-size: 2.4rem;
+  font-weight: $font-weight-text2;
+}
