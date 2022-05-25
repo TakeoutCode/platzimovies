@@ -1,0 +1,205 @@
+@use "@styles/vars/colors-theme-secondary";
+
+.category__colorGenre--28 {
+  background: $yellow;
+}
+
+.category__colorGenre--12 {
+  background: $green;
+}
+
+.category__colorGenre--16 {
+  background: $lightBlue;
+}
+
+.category__colorGenre--35 {
+  background: $darkBlue;
+}
+
+.category__colorGenre--80 {
+  background: $red;
+}
+
+.category__colorGenre--99 {
+  background: $aqua;
+}
+
+.category__colorGenre--18 {
+  background: $gray;
+}
+.category__colorGenre--10751 {
+  background: $blue;
+}
+.category__colorGenre--14 {
+  background: $purple-medium-1;
+}
+.category__colorGenre--36 {
+  background: $yellowLight;
+}
+.category__colorGenre--27 {
+  background: $coffeeLight;
+}
+.category__colorGenre--10402 {
+  background: $orangeLight;
+}
+.category__colorGenre--9648 {
+  background: $violet;
+}
+.category__colorGenre--10749 {
+  background: $pink;
+}
+.category__colorGenre--878 {
+  background: $coffee;
+}
+.category__colorGenre--10770 {
+  background: $orange;
+}
+.category__colorGenre--53 {
+  background: $greenLight;
+}
+.category__colorGenre--10752 {
+  background: $grayDark;
+}
+.category__colorGenre--37 {
+  background: $redLight;
+}
+
+.category__colorDegradGenre--28 {
+  background: linear-gradient(
+    180deg,
+    rgba($yellow, 0.35) 19.27%,
+    rgba(0, 0, 0, 0) 29.17%
+  );
+}
+
+.category__colorDegradGenre--12 {
+  background: linear-gradient(
+    180deg,
+    rgba($green, 0.35) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+
+.category__colorDegradGenre--16 {
+  background: linear-gradient(
+    180deg,
+    rgba($lightBlue, 0.35) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+
+.category__colorDegradGenre--35 {
+  background: linear-gradient(
+    180deg,
+    rgba($darkBlue, 0.35) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+
+.category__colorDegradGenre--80 {
+  background: linear-gradient(
+    180deg,
+    rgba($red, 0.35) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+
+.category__colorDegradGenre--99 {
+  background: linear-gradient(
+    180deg,
+    rgba($aqua, 0.35) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+
+.category__colorDegradGenre--18 {
+  background: linear-gradient(
+    180deg,
+    rgba($gray, 0.35) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+.category__colorDegradGenre--10751 {
+  background: linear-gradient(
+    180deg,
+    rgba($blue, 0.35) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+.category__colorDegradGenre--14 {
+  background: linear-gradient(
+    180deg,
+    rgba($purple-medium-1, 0.35) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+.category__colorDegradGenre--36 {
+  background: linear-gradient(
+    180deg,
+    rgba($yellowLight, 0.35) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+.category__colorDegradGenre--27 {
+  background: linear-gradient(
+    180deg,
+    rgba($coffeeLight, 0.35) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+.category__colorDegradGenre--10402 {
+  background: linear-gradient(
+    180deg,
+    rgba($orangeLight, 0.35) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+.category__colorDegradGenre--9648 {
+  background: linear-gradient(
+    180deg,
+    rgba($violet, 0.35) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+.category__colorDegradGenre--10749 {
+  background: linear-gradient(
+    180deg,
+    rgba($pink, 0.35) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+.category__colorDegradGenre--878 {
+  background: linear-gradient(
+    180deg,
+    rgba($coffee, 0.35) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+.category__colorDegradGenre--10770 {
+  background: linear-gradient(
+    180deg,
+    rgba($orange, 0.35) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+.category__colorDegradGenre--53 {
+  background: linear-gradient(
+    180deg,
+    rgba($greenLight, 0.35) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+.category__colorDegradGenre--10752 {
+  background: linear-gradient(
+    180deg,
+    rgba($grayDark, 0.35) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+.category__colorDegradGenre--37 {
+  background: linear-gradient(
+    180deg,
+    rgba($redLight, 0.35) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
