@@ -1,16 +1,16 @@
 @use "@styles/styles.scss" as *;
 
 .footer {
-  position: fixed;
   bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 48px;
+  height: 50px;
   background: $purple-medium-3;
 
   h2 {
+    font-size: 1.8rem;
     color: $purple-light-2;
     font-weight: $font-weight-title2;
   }
