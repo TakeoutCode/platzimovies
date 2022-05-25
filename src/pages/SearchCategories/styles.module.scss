@@ -1,0 +1,26 @@
+@use "@styles/styles.scss" as *;
+
+.searchMovies {
+  width: 100%;
+  height: 100vh;
+  padding: 24px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.arrow {
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  margin: 20px 0;
+  color: $purple-dark-1;
+  font-weight: $font-weight-title1;
+  cursor: pointer;
+}
+
+.showmore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
