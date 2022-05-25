@@ -6,7 +6,7 @@ const Dotenv = require("dotenv-webpack");
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, "docs"),
     filename: "bundle.js",
     publicPath: "./",
   },
@@ -66,7 +66,7 @@ module.exports = {
   ],
   devServer: {
     historyApiFallback: true,
-    static: path.join(__dirname, "build"),
+    static: path.join(__dirname, "docs"),
     compress: true,
     port: 8081,
     open: true,
