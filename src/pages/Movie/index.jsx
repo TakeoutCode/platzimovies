@@ -17,7 +17,7 @@ export const Movie = () => {
     <div className={styles.movie}>
       <MdOutlineArrowBackIosNew
         className={styles.arrow}
-        onClick={() => navigate("/")}
+        onClick={() => navigate("movie-app/")}
       />
       <div
         style={{
