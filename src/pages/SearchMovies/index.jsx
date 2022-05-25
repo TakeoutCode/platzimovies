@@ -1,27 +1,28 @@
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import { Search } from "@components/Search";
 import { Button } from "@elements/Button";
 import { ListMovies } from "@components/ListMovies";
-import { Category } from "@components/Categories/Category";
+import { useSearch } from "@hooks/useSearch";
 
 import styles from "./styles.module.scss";
 
 export const SearchMovies = () => {
   const navigate = useNavigate();
-  const { name, id } = useParams();
+  const { page, setPage, movies } = useSearch();
+
   return (
-    <div className={`${styles.searchMovies} category__colorDegradGenre--${id}`}>
+    <div className={`${styles.searchMovies}`}>
       <MdOutlineArrowBackIosNew
         className={styles.arrow}
         onClick={() => navigate("/")}
       />
-      {name && id ? <Category title={name} id={id} active /> : <Search />}
+      <Search />
 
-      <ListMovies />
+      <ListMovies movies={movies} />
 
-      <div className={styles.showmore}>
+      <div className={styles.showmore} onClick={() => setPage(page + 1)}>
         <Button large>Show more</Button>
       </div>
     </div>
