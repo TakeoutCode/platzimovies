@@ -8,7 +8,7 @@ export const Category = ({ title, id, active }) => {
   return (
     <div
       className={styles.category}
-      onClick={() => navigate(`movie-app/category/${title.trim()}/${id}`)}
+      onClick={() => navigate(`category/${title.trim()}/${id}`)}
     >
       <div
         className={`${styles.category_icon} category__colorGenre--${id}`}

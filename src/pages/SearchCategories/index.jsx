@@ -24,7 +24,7 @@ export const SearchCategories = () => {
     <div className={`${styles.searchMovies} category__colorDegradGenre--${id}`}>
       <MdOutlineArrowBackIosNew
         className={styles.arrow}
-        onClick={() => navigate("movie-app/")}
+        onClick={() => navigate(window.history.back())}
       />
       <Category title={date ? `Day Trends` : name} id={id} active />
 
