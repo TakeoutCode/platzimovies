@@ -12,10 +12,16 @@ export const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="movie-app/" element={<Home />} />
-        <Route path="movie/:id" element={<Movie />} />
-        <Route path="search/movies/:search" element={<SearchMovies />} />
-        <Route path="category/:name/:id" element={<SearchCategories />} />
-        <Route path="trends/:date" element={<SearchCategories />} />
+        <Route path="movie-app/movie/:id" element={<Movie />} />
+        <Route
+          path="movie-app/search/movies/:search"
+          element={<SearchMovies />}
+        />
+        <Route
+          path="movie-app/category/:name/:id"
+          element={<SearchCategories />}
+        />
+        <Route path="movie-app/trends/:date" element={<SearchCategories />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

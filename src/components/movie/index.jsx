@@ -10,7 +10,7 @@ export const Movie = ({ title, poster_path, id }) => {
       src={`https://image.tmdb.org/t/p/w200/${poster_path}`}
       className={styles.movie__image}
       alt={title}
-      onClick={() => navigate(`/movie/${id}`)}
+      onClick={() => navigate(`movie-app/movie/${id}`)}
     />
   );
 };

@@ -10,7 +10,7 @@ export const Search = () => {
 
   const handleClick = () => {
     if (search.length >= 2) {
-      navigate(`/search/movies/${search}`);
+      navigate(`movie-app/search/movies/${search}`);
     }
   };
 
