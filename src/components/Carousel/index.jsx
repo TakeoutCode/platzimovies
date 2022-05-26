@@ -15,7 +15,9 @@ export const Carousel = ({ button, title }) => {
       <div className={styles.container}>
         <h2 className={styles.container_title}>{title}</h2>
         {button ? (
-          <Button onClick={() => navigate(`trends/day`)}>Show more</Button>
+          <Button onClick={() => navigate(`/movie-app/trends/day`)}>
+            Show more
+          </Button>
         ) : null}
       </div>
       <figure className={styles.carousel}>
