@@ -38,7 +38,6 @@
     "build": "webpack --mode production",
     "start": "webpack serve --mode development --env development"
   },
-  "homepage": "https://takeout85.github.io/movie-app/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Takeout85/movie-app.git"
