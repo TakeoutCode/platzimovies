@@ -5,6 +5,7 @@ import { Button } from "@elements/Button";
 import { ListMovies } from "@components/ListMovies";
 import { Category } from "@components/Categories/Category";
 import { useGetData } from "@hooks/useGetData";
+import { HelmetLayout } from "@components/HelmetLayout";
 
 import styles from "./styles.module.scss";
 
@@ -22,6 +23,7 @@ export const SearchCategories = () => {
 
   return (
     <div className={`${styles.searchMovies} category__colorDegradGenre--${id}`}>
+      <HelmetLayout title={name} subtitle={name} />
       <MdOutlineArrowBackIosNew
         className={styles.arrow}
         onClick={() => navigate(window.history.back())}

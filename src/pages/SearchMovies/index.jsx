@@ -5,6 +5,7 @@ import { Search } from "@components/Search";
 import { Button } from "@elements/Button";
 import { ListMovies } from "@components/ListMovies";
 import { useSearch } from "@hooks/useSearch";
+import { HelmetLayout } from "@components/HelmetLayout";
 
 import styles from "./styles.module.scss";
 
@@ -14,6 +15,7 @@ export const SearchMovies = () => {
 
   return (
     <div className={`${styles.searchMovies}`}>
+      <HelmetLayout title="Search Movies" subtitle="Search" />
       <MdOutlineArrowBackIosNew
         className={styles.arrow}
         onClick={() => navigate(window.history.back())}

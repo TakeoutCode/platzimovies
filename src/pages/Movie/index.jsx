@@ -5,6 +5,7 @@ import { AiFillStar } from "react-icons/ai";
 import { useGetData } from "@hooks/useGetData";
 import { Categories } from "@components/Categories";
 import { Carousel } from "@components/Carousel";
+import { HelmetLayout } from "@components/HelmetLayout";
 
 import styles from "./styles.module.scss";
 
@@ -15,6 +16,7 @@ export const Movie = () => {
   const navigate = useNavigate();
   return (
     <div className={styles.movie}>
+      <HelmetLayout title={dataMovies.title} subtitle={dataMovies.overview} />
       <MdOutlineArrowBackIosNew
         className={styles.arrow}
         onClick={() => navigate(window.history.back())}
