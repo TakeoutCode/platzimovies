@@ -37,7 +37,7 @@ export const Movie = () => {
         </div>
         <p className={styles.movie_resume}>{dataMovies.overview}</p>
         <Categories genres={dataMovies.genres} />
-        <Carousel title="Similar movies" />
+        <Carousel title="Similar movies" URL={`/movie/${id}/recommendations`} />
       </div>
     </div>
   );
