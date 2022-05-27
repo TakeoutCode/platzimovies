@@ -26,7 +26,7 @@ export const SearchCategories = () => {
       <HelmetLayout title={name} subtitle={name} />
       <MdOutlineArrowBackIosNew
         className={styles.arrow}
-        onClick={() => navigate(window.history.back())}
+        onClick={() => navigate(-1)}
       />
       <Category title={date ? `Day Trends` : name} id={id} active />
 

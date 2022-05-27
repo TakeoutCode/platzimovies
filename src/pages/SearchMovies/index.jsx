@@ -18,7 +18,7 @@ export const SearchMovies = () => {
       <HelmetLayout title="Search Movies" subtitle="Search" />
       <MdOutlineArrowBackIosNew
         className={styles.arrow}
-        onClick={() => navigate(window.history.back())}
+        onClick={() => navigate(-1)}
       />
       <Search />
 
