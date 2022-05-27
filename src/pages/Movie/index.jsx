@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import { AiFillStar } from "react-icons/ai";
@@ -19,7 +19,7 @@ export const Movie = () => {
       <HelmetLayout title={dataMovies.title} subtitle={dataMovies.overview} />
       <MdOutlineArrowBackIosNew
         className={styles.arrow}
-        onClick={() => navigate(window.history.back())}
+        onClick={() => navigate(-1)}
       />
       <div
         style={{

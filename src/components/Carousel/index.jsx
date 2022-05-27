@@ -6,9 +6,9 @@ import { Movie } from "@components/movie";
 
 import styles from "./styles.module.scss";
 
-export const Carousel = ({ button, title }) => {
+export const Carousel = ({ button, title, URL }) => {
   const navigate = useNavigate();
-  const URL = `trending/movie/day`;
+
   const { dataMovies } = useGetData({ url: URL, category: false });
   return (
     <>
