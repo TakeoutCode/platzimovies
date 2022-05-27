@@ -10,6 +10,7 @@ import { HelmetLayout } from "@components/HelmetLayout";
 import styles from "./styles.module.scss";
 
 export const SearchMovies = () => {
+  window.scrollTo(0, 0);
   const navigate = useNavigate();
   const { page, setPage, movies } = useSearch();
 

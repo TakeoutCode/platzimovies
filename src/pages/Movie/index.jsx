@@ -10,6 +10,7 @@ import { HelmetLayout } from "@components/HelmetLayout";
 import styles from "./styles.module.scss";
 
 export const Movie = () => {
+  window.scrollTo(0, 0);
   const { id } = useParams();
   const URL = `movie/${id}`;
   const { dataMovies } = useGetData({ url: URL, dataType: "movie" });

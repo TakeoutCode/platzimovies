@@ -10,6 +10,7 @@ import { HelmetLayout } from "@components/HelmetLayout";
 import styles from "./styles.module.scss";
 
 export const SearchCategories = () => {
+  window.scrollTo(0, 0);
   const navigate = useNavigate();
   const { name, id, date } = useParams();
   let URL = `discover/movie?with_genres=${id}`;
