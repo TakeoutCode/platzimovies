@@ -6,6 +6,7 @@ import { useGetData } from "@hooks/useGetData";
 import { Categories } from "@components/Categories";
 import { Carousel } from "@components/Carousel";
 import { HelmetLayout } from "@components/HelmetLayout";
+import { ArrowBack } from "@components/ArrowBack";
 
 import styles from "./styles.module.scss";
 
@@ -14,14 +15,10 @@ export const Movie = () => {
   const { id } = useParams();
   const URL = `movie/${id}`;
   const { dataMovies } = useGetData({ url: URL, dataType: "movie" });
-  const navigate = useNavigate();
   return (
     <div className={styles.movie}>
       <HelmetLayout title={dataMovies.title} subtitle={dataMovies.overview} />
-      <MdOutlineArrowBackIosNew
-        className={styles.arrow}
-        onClick={() => navigate(-1)}
-      />
+      <ArrowBack />
       <div
         style={{
           backgroundImage: `url(https://image.tmdb.org/t/p/original/${dataMovies.backdrop_path})`,
