@@ -24,6 +24,10 @@
   }
 }
 
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   .carousel {
     overflow: inherit;
