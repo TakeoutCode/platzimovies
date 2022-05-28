@@ -19,3 +19,12 @@
   left: 5%;
   color: $purple-light-1;
 }
+
+@media only screen and (min-width: 1440px) {
+  #arrow__movies {
+    position: fixed;
+    top: 5%;
+    left: calc(50% - 650px);
+    color: $purple-light-1;
+  }
+}
