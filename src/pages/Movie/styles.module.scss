@@ -68,17 +68,6 @@
   align-items: center;
 }
 
-.arrow {
-  position: fixed;
-  z-index: 2;
-  top: 5%;
-  left: 5%;
-  width: 40px;
-  height: 40px;
-  color: $purple-light-1;
-  font-weight: $font-weight-title1;
-}
-
 .movie_review::-webkit-scrollbar {
   width: 7px;
 }
