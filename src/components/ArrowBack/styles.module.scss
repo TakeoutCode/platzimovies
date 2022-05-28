@@ -1,0 +1,21 @@
+@use "@styles/styles.scss" as *;
+
+.arrow {
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  font-weight: $font-weight-title1;
+  cursor: pointer;
+}
+
+#arrow__search {
+  margin: 20px 0;
+  color: $purple-dark-1;
+}
+
+#arrow__movies {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  color: $purple-light-1;
+}
