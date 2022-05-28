@@ -3,6 +3,7 @@
 .category {
   display: flex;
   align-items: center;
+  cursor: pointer;
 
   &_icon {
     width: 3rem;

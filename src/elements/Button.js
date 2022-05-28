@@ -11,4 +11,5 @@ export const Button = styled.button`
   color: #eeeaf2;
   font-size: ${(props) => (props.large ? "1.8rem" : "1.4rem")};
   font-weight: 500;
+  cursor: pointer;
 `;
