@@ -23,3 +23,15 @@
     color: $purple-dark-2;
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .carousel {
+    overflow: inherit;
+    overflow-x: inherit;
+    max-height: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    place-items: center;
+    grid-gap: 15px;
+  }
+}
