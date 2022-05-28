@@ -78,3 +78,12 @@
   color: $purple-light-1;
   font-weight: $font-weight-title1;
 }
+
+.movie_review::-webkit-scrollbar {
+  width: 7px;
+}
+
+.movie_review::-webkit-scrollbar-thumb {
+  background-color: $purple-dark-1;
+  border-radius: 10px;
+}
