@@ -8,9 +8,8 @@ export const Movie = ({ title, poster_path, id, list }) => {
   return (
     <img
       src={`https://image.tmdb.org/t/p/w200/${poster_path}`}
-      className={`${styles.movie__image} ${
-        list ? styles.movie__image_list : ""
-      }`}
+      id={list && styles.movie__image_list}
+      className={styles.movie__image}
       alt={title}
       onClick={() => navigate(`/movie-app/movie/${id}`)}
     />

@@ -4,7 +4,14 @@
   margin-right: 16px;
   border-radius: 8px;
   cursor: pointer;
-  &_list {
+}
+
+#movie__image_list {
+  margin-right: 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  .movie__image {
     margin-right: 0px;
   }
 }
