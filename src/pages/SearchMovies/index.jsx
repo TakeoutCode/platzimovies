@@ -10,7 +10,7 @@ import styles from "./styles.module.scss";
 
 export const SearchMovies = () => {
   window.scrollTo(0, 0);
-  const { page, setPage, movies } = useSearch();
+  const { page, setPage, movies, loading } = useSearch();
 
   return (
     <div className={`${styles.searchMovies}`}>
@@ -18,7 +18,7 @@ export const SearchMovies = () => {
       <ArrowBack id />
       <Search />
 
-      <ListMovies movies={movies} />
+      <ListMovies movies={movies} loading={loading} />
 
       <div className={styles.showmore} onClick={() => setPage(page + 1)}>
         <Button large>Show more</Button>
