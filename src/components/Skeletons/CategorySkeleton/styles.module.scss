@@ -1,0 +1,9 @@
+@use "@styles/styles.scss" as *;
+
+.category {
+  display: inline-block;
+  width: 100px;
+  height: 20px;
+  border-radius: 8px;
+  background-color: $grayDark;
+}
