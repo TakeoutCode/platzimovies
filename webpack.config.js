@@ -2,6 +2,9 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const Dotenv = require("dotenv-webpack");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -11,7 +14,7 @@ module.exports = {
     publicPath: "./",
   },
   devtool: "source-map",
-  mode: "development",
+  mode: "production",
   resolve: {
     extensions: [".js", ".jsx"],
     alias: {
@@ -63,12 +66,13 @@ module.exports = {
       filename: "[name].css",
     }),
     new Dotenv(),
+    new CleanWebpackPlugin(),
   ],
+  optimization: {
+    minimize: true,
+    minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
+  },
   devServer: {
     historyApiFallback: true,
-    static: path.join(__dirname, "docs"),
-    compress: true,
-    port: 8081,
-    open: true,
   },
 };
