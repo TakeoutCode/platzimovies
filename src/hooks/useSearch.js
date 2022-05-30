@@ -6,6 +6,7 @@ export function useSearch() {
   const [searchParams, setSearchParams] = useState("");
   const [page, setPage] = useState(1);
   const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
   const { search } = useParams();
   const URL = `search/movie?language=en-US&query=${search}&page=${page}&include_adult=false`;
   useEffect(() => {
@@ -28,6 +29,7 @@ export function useSearch() {
         setPage(1);
       }
       setSearchParams(search);
+      setLoading(false);
     };
     if (typeof search !== "undefined" && search.length >= 2) {
       if (search !== searchParams) {
@@ -38,5 +40,5 @@ export function useSearch() {
     }
   }, [page, search]);
 
-  return { page, setPage, movies };
+  return { page, setPage, movies, loading };
 }

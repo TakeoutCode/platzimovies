@@ -6,6 +6,7 @@ export function useGetData({ url, pagination }) {
   const [dataMovies, setDataMovies] = useState([]);
   const [page, setPage] = useState(1);
   const [categoryId, setCategoryId] = useState(null);
+  const [loading, setLoading] = useState(true);
   const { id } = useParams();
   let URL = url;
   if (pagination) {
@@ -36,11 +37,12 @@ export function useGetData({ url, pagination }) {
         setDataMovies(data);
       }
       setCategoryId(id);
+      setLoading(false);
     };
 
     if (typeof URL !== "undefined" && URL !== null) {
       fetchData(URL);
     }
   }, [page, id]);
-  return { page, setPage, dataMovies };
+  return { page, setPage, dataMovies, loading };
 }

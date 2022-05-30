@@ -3,6 +3,7 @@ import axios from "axios";
 
 export function useCategories({ url }) {
   const [dataMovies, setDataMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchData = async (url) => {
       const api = axios.create({
@@ -17,10 +18,11 @@ export function useCategories({ url }) {
       const { data } = await api.get(url);
 
       setDataMovies(data.genres);
+      setLoading(false);
     };
     if (typeof url !== "undefined" && url !== null) {
       fetchData(url);
     }
   }, []);
-  return { dataMovies };
+  return { dataMovies, loading };
 }
