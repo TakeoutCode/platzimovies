@@ -1,0 +1,41 @@
+@use "@styles/styles.scss" as *;
+
+.cardReview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    width: 70%;
+    color: $purple-dark-2;
+    font-family: $font-family-titles;
+    font-size: 3rem;
+    font-weight: $font-weight-title1;
+  }
+
+  &__qualification {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 20%;
+  }
+
+  &__star {
+    color: $yellow;
+    font-size: 2rem;
+  }
+
+  &__value {
+    color: $purple-dark-2;
+    font-size: 2rem;
+    font-weight: $font-weight-title2;
+    margin-left: 8px;
+  }
+
+  &__resume {
+    color: $purple-dark-2;
+    font-size: 1.6rem;
+    font-weight: $font-weight-text2;
+    margin-top: 1.6rem;
+  }
+}
