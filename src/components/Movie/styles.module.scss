@@ -1,6 +1,10 @@
 .movie__image {
   width: 150px;
   height: 100%;
+  margin-right: 16px;
   border-radius: 8px;
   cursor: pointer;
+  &_list {
+    margin-right: 0px;
+  }
 }
