@@ -1,0 +1,37 @@
+@use "@styles/styles.scss" as *;
+
+.review {
+  width: 100%;
+  &__title {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background: $grayDark;
+    border-radius: 8px;
+  }
+  &__star {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    color: $grayDark;
+  }
+  &__text {
+    width: 90%;
+    height: 30px;
+    margin-top: 15px;
+    background: $grayDark;
+    border-radius: 8px;
+  }
+  &__resume {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__qualification {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
