@@ -1,0 +1,10 @@
+@use "@styles/styles.scss" as *;
+
+.movie {
+  display: inline-block;
+  width: 150px;
+  height: 200px;
+  border-radius: 8px;
+  margin-right: 16px;
+  background-color: $grayDark;
+}
