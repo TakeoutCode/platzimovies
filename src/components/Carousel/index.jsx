@@ -2,14 +2,15 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@elements/Button";
 import { useGetData } from "@hooks/useGetData";
-import { Movie } from "@components/movie";
+import { Movie } from "@components/Movie";
+import { CardMovieSkeleton } from "@components/Skeletons/CardMovieSkeleton";
 
 import styles from "./styles.module.scss";
 
 export const Carousel = ({ button, title, URL }) => {
   const navigate = useNavigate();
 
-  const { dataMovies } = useGetData({ url: URL, category: false });
+  const { dataMovies, loading } = useGetData({ url: URL, category: false });
   return (
     <>
       <div className={styles.container}>
@@ -21,9 +22,11 @@ export const Carousel = ({ button, title, URL }) => {
         ) : null}
       </div>
       <figure className={styles.carousel}>
-        {dataMovies.map((trend) => (
-          <Movie key={trend.id} {...trend} />
-        ))}
+        {loading ? (
+          <CardMovieSkeleton />
+        ) : (
+          dataMovies.map((trend) => <Movie key={trend.id} {...trend} />)
+        )}
       </figure>
     </>
   );
