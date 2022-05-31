@@ -9,7 +9,7 @@ import { ArrowBack } from "@components/ArrowBack";
 
 import styles from "./styles.module.scss";
 
-const SearchCategories = () => {
+export const SearchCategories = () => {
   window.scrollTo(0, 0);
   const { name, id, date } = useParams();
   let URL = `discover/movie?with_genres=${id}`;
@@ -37,5 +37,3 @@ const SearchCategories = () => {
     </div>
   );
 };
-
-export default SearchCategories;
