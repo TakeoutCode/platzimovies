@@ -10,7 +10,7 @@ import { CardReviewSkeleton } from "@components/Skeletons/CardReviewSkeleton";
 
 import styles from "./styles.module.scss";
 
-export const Movie = () => {
+const Movie = () => {
   window.scrollTo(0, 0);
   const { id } = useParams();
   const URL = `movie/${id}`;
@@ -35,3 +35,5 @@ export const Movie = () => {
     </div>
   );
 };
+
+export default Movie;
