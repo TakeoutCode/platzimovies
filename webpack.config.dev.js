@@ -7,7 +7,8 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "docs"),
-    filename: "bundle.js",
+    filename: "[name].bundle.js",
+    chunkFilename: "[name].bundle.js",
     publicPath: "/",
   },
   devtool: "source-map",
@@ -64,6 +65,12 @@ module.exports = {
     }),
     new Dotenv(),
   ],
+
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
+  },
 
   devServer: {
     historyApiFallback: true,
