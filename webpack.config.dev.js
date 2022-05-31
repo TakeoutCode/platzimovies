@@ -66,12 +66,6 @@ module.exports = {
     new Dotenv(),
   ],
 
-  optimization: {
-    splitChunks: {
-      chunks: "all",
-    },
-  },
-
   devServer: {
     historyApiFallback: true,
     static: path.join(__dirname, "docs"),
