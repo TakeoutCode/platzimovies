@@ -1,9 +1,21 @@
+@use "@styles/styles.scss" as *;
+
 .movie__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 150px;
   height: 225px;
   margin-right: 16px;
   border-radius: 8px;
+  background-color: #3e0f64;
   cursor: pointer;
+  p {
+    color: $purple-light-1;
+    font-size: 2.4rem;
+    font-weight: $font-weight-title2;
+    text-align: center;
+  }
 }
 
 #movie__image_list {
