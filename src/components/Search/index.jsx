@@ -8,9 +8,17 @@ export const Search = () => {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    if (search.length >= 2) {
-      navigate(`/movie-app/search/movies/${search}`);
+  const navigation = (e) => {
+    if (e.key) {
+      if (e.key === "Enter") {
+        if (search.length >= 2) {
+          navigate(`/movie-app/search/movies/${search}`);
+        }
+      }
+    } else {
+      if (search.length >= 2) {
+        navigate(`/movie-app/search/movies/${search}`);
+      }
     }
   };
 
@@ -20,10 +28,11 @@ export const Search = () => {
         type="text"
         placeholder="Vengadores"
         value={search}
+        onKeyUp={(e) => navigation(e)}
         onChange={(e) => setSearch(e.target.value)}
         className={styles.search_input}
       />
-      <button className={styles.search_button} onClick={handleClick}>
+      <button className={styles.search_button} onClick={navigation}>
         <FcSearch className={styles.search_icon} />
       </button>
     </div>
