@@ -1,7 +1,7 @@
 @use "@styles/styles.scss" as *;
 
 .carousel {
-  overflow: auto;
+  overflow: hidden;
   overflow-x: scroll;
   white-space: nowrap;
   width: 100%;
