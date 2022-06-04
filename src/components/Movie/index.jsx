@@ -33,7 +33,7 @@ export const Movie = ({ title, poster_path, id, list }) => {
       ) : (
         <div
           id={list && styles.movie__image_list}
-          className={styles.movie__image}
+          className={`${styles.movie__image} ${styles.movie__image_notFound}`}
           ref={element}
           onClick={() => navigate(`/movie-app/movie/${id}`)}
         >

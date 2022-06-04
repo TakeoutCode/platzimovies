@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import { Home } from "@pages/Home";
 import { NotFound } from "@pages/NotFound";
@@ -11,6 +11,7 @@ export const App = () => {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Navigate to="/movie-app/" replace />} />
         <Route path="/movie-app/" element={<Home />} />
         <Route path="/movie-app/movie/:id" element={<Movie />} />
         <Route

@@ -1,14 +1,11 @@
 @use "@styles/styles.scss" as *;
 
 .movie__image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   width: 150px;
   height: 225px;
   margin-right: 16px;
   border-radius: 8px;
-  background-color: #3e0f64;
   cursor: pointer;
   p {
     color: $purple-light-1;
@@ -18,6 +15,12 @@
   }
 }
 
+.movie__image_notFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3e0f64;
+}
 #movie__image_list {
   margin-right: 0px;
 }
