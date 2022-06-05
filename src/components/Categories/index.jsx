@@ -8,9 +8,7 @@ import styles from "./styles.module.scss";
 export const Categories = ({ genres }) => {
   const URL = `genre/movie/list?language=en-US`;
 
-  const { dataMovies, loading } = useCategories({
-    url: genres ? null : URL,
-  });
+  const { dataMovies, loading } = useCategories(genres ? null : URL);
   const dataGenres = genres || dataMovies;
   return (
     <>

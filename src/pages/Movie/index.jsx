@@ -14,7 +14,7 @@ export const Movie = () => {
   window.scrollTo(0, 0);
   const { id } = useParams();
   const URL = `movie/${id}`;
-  const { dataMovies, loading } = useGetData({ url: URL, dataType: "movie" });
+  const { dataMovies, loading } = useGetData(URL);
 
   const backgroundImage = loading
     ? { background: "#2a0646" }

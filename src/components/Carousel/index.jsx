@@ -10,7 +10,7 @@ import styles from "./styles.module.scss";
 export const Carousel = ({ button, title, URL }) => {
   const navigate = useNavigate();
 
-  const { dataMovies, loading } = useGetData({ url: URL, category: false });
+  const { dataMovies, loading } = useGetData(URL);
   return (
     <>
       <div className={styles.container}>

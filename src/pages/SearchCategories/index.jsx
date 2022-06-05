@@ -16,10 +16,7 @@ export const SearchCategories = () => {
   if (date) {
     URL = "trending/movie/day";
   }
-  const { dataMovies, page, setPage, loading } = useGetData({
-    url: URL,
-    pagination: date ? false : true,
-  });
+  const { dataMovies, page, setPage, loading } = useGetData(URL);
 
   return (
     <div className={`${styles.searchMovies} category__colorDegradGenre--${id}`}>
@@ -29,11 +26,9 @@ export const SearchCategories = () => {
 
       <ListMovies movies={dataMovies} loading={loading} />
 
-      {date ? null : (
-        <div className={styles.showmore} onClick={() => setPage(page + 1)}>
-          <Button large>Show more</Button>
-        </div>
-      )}
+      <div className={styles.showmore} onClick={() => setPage(page + 1)}>
+        <Button large>Show more</Button>
+      </div>
     </div>
   );
 };
