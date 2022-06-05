@@ -8,7 +8,7 @@ export function useSearch() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const { search } = useParams();
-  const URL = `search/movie?language=en-US&query=${search}&page=${page}&include_adult=false`;
+  const URL = `search/movie?language=en-US&include_adult=false`;
   useEffect(() => {
     const fetchData = async (url) => {
       const api = axios.create({
@@ -21,7 +21,12 @@ export function useSearch() {
         },
       });
 
-      const { data } = await api.get(url);
+      const { data } = await api.get(url, {
+        params: {
+          query: search,
+          page: page,
+        },
+      });
       if (search === searchParams && page > 1) {
         setMovies([...movies, ...data.results]);
       } else {

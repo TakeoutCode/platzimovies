@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export function useCategories({ url }) {
+export function useCategories(url) {
   const [dataMovies, setDataMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
