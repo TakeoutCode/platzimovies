@@ -34,7 +34,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .carousel {
+  #session {
     overflow: inherit;
     overflow-x: inherit;
     max-height: none;
@@ -42,8 +42,5 @@
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     place-items: center;
     grid-gap: 15px;
-  }
-  .carousel::-webkit-scrollbar {
-    display: none;
   }
 }
