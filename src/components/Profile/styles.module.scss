@@ -1,0 +1,23 @@
+@use "@styles/styles.scss" as *;
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+  cursor: pointer;
+
+  &__avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__username {
+    font-size: 1.5rem;
+    font-weight: $font-weight-title2;
+    color: $purple-dark-1;
+  }
+}
