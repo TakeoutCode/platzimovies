@@ -3,7 +3,10 @@ import api from "@utils/axiosPreset";
 const UserContext = React.createContext();
 
 export const UserProvider = ({ children }) => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState({
+    success: false,
+    session_id: null,
+  });
   const [details, setDetails] = useState({});
   const localUser = JSON.parse(localStorage.getItem("session_user"));
   useEffect(() => {
@@ -15,12 +18,15 @@ export const UserProvider = ({ children }) => {
       });
       setDetails(data);
     };
-    if (user.success) {
-      console.log(user);
-      axiosData();
+    console.log();
+    if (typeof localUser === "undefined" || localUser === null) {
+      localStorage.setItem("session_user", JSON.stringify(user));
     } else if (localUser.success && !user.success) {
       console.log("localUser");
       setUser(localUser);
+      axiosData();
+    } else if (user.success) {
+      console.log(user);
       axiosData();
     }
     console.log(user);
