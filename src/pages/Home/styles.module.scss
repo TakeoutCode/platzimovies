@@ -4,9 +4,15 @@
   width: 100%;
   height: 100%;
   padding: 24px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
 
   &_title {
-    margin-bottom: 20px;
     font-size: 3rem;
     color: $purple-dark-2;
     font-weight: $font-weight-title1;
