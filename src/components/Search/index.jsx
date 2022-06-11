@@ -32,7 +32,11 @@ export const Search = () => {
         onChange={(e) => setSearch(e.target.value)}
         className={styles.search_input}
       />
-      <button className={styles.search_button} onClick={navigation}>
+      <button
+        className={styles.search_button}
+        onClick={navigation}
+        aria-label="search"
+      >
         <FcSearch className={styles.search_icon} />
       </button>
     </div>
