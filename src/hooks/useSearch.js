@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { useParams } from "react-router-dom";
+import api from "@utils/axiosPreset";
 
 export function useSearch() {
   const [searchParams, setSearchParams] = useState("");
@@ -10,17 +10,7 @@ export function useSearch() {
   const { search } = useParams();
   const URL = `search/movie?language=en-US&include_adult=false`;
   useEffect(() => {
-    const fetchData = async (url) => {
-      const api = axios.create({
-        baseURL: "https://api.themoviedb.org/3/",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        params: {
-          api_key: process.env.REACT_APP_API_KEY,
-        },
-      });
-
+    const axiosData = async (url) => {
       const { data } = await api.get(url, {
         params: {
           query: search,
@@ -38,9 +28,9 @@ export function useSearch() {
     };
     if (typeof search !== "undefined" && search.length >= 2) {
       if (search !== searchParams) {
-        fetchData(URL);
+        axiosData(URL);
       } else if (page > 1) {
-        fetchData(URL);
+        axiosData(URL);
       }
     }
   }, [page, search]);

@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
+import api from "@utils/axiosPreset";
+import UserContext from "@context/index";
 
 export function useGetData(url) {
   const [dataMovies, setDataMovies] = useState([]);
@@ -9,20 +10,13 @@ export function useGetData(url) {
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
+  const { user } = useContext(UserContext);
   useEffect(() => {
-    const fetchData = async (url) => {
-      const api = axios.create({
-        baseURL: "https://api.themoviedb.org/3/",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        params: {
-          api_key: process.env.REACT_APP_API_KEY,
-        },
-      });
+    const axiosData = async (url) => {
       const { data } = await api.get(url, {
         params: {
           page: page,
+          session_id: user.session_id,
         },
       });
 
@@ -40,9 +34,7 @@ export function useGetData(url) {
       setLoading(false);
     };
 
-    if (typeof url !== "undefined" && url !== null) {
-      fetchData(url);
-    }
+    axiosData(url);
   }, [page, id]);
   return { page, setPage, dataMovies, loading };
 }
