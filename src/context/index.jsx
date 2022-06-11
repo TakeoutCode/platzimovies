@@ -18,18 +18,14 @@ export const UserProvider = ({ children }) => {
       });
       setDetails(data);
     };
-    console.log();
     if (typeof localUser === "undefined" || localUser === null) {
       localStorage.setItem("session_user", JSON.stringify(user));
     } else if (localUser.success && !user.success) {
-      console.log("localUser");
       setUser(localUser);
       axiosData();
     } else if (user.success) {
-      console.log(user);
       axiosData();
     }
-    console.log(user);
   }, [user]);
   return (
     <UserContext.Provider value={{ user, setUser, details, setDetails }}>
