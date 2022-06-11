@@ -6,11 +6,15 @@
   align-items: center;
 
   &__title {
-    width: 70%;
     color: $purple-dark-2;
     font-family: $font-family-titles;
     font-size: 3rem;
     font-weight: $font-weight-title1;
+  }
+  &__media {
+    display: flex;
+    align-items: center;
+    width: 100%;
   }
 
   &__qualification {
@@ -37,5 +41,17 @@
     font-size: 1.6rem;
     font-weight: $font-weight-text2;
     margin-top: 1.6rem;
+  }
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
