@@ -1,0 +1,15 @@
+@use "@styles/styles.scss" as *;
+
+.cardReview__heart {
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+  color: $grayDark;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+#liked {
+  color: $purple-medium-2;
+  animation: heartBeat 0.3s;
+}
