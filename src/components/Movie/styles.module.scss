@@ -19,14 +19,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3e0f64;
+  background-color: $purple-dark-1;
 }
 #movie__image_list {
   margin-right: 0px;
 }
 
-@media only screen and (min-width: 768px) {
-  .movie__image {
-    margin-right: 0px;
-  }
-}
+// @media only screen and (min-width: 768px) {
+//   .movie__image {
+//     margin-right: 0px;
+//   }
+// }

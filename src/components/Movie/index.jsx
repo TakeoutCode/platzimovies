@@ -18,13 +18,14 @@ export const Movie = ({ title, poster_path, id, list }) => {
     });
     observer.observe(element.current);
   }, [element]);
+  const idMovie = list ? styles.movie__image_list : "";
   return (
     <>
       {poster_path ? (
         <img
-          id={list && styles.movie__image_list}
+          id={idMovie}
           className={styles.movie__image}
-          src={show ? `https://image.tmdb.org/t/p/w500/${poster_path}` : ""}
+          src={show ? `https://image.tmdb.org/t/p/w200/${poster_path}` : ""}
           loading="lazy"
           alt={title}
           ref={element}
@@ -32,7 +33,7 @@ export const Movie = ({ title, poster_path, id, list }) => {
         />
       ) : (
         <div
-          id={list && styles.movie__image_list}
+          id={idMovie}
           className={`${styles.movie__image} ${styles.movie__image_notFound}`}
           ref={element}
           onClick={() => navigate(`/movie-app/movie/${id}`)}
