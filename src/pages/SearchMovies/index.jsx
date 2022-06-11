@@ -20,8 +20,10 @@ export const SearchMovies = () => {
 
       <ListMovies movies={movies} loading={loading} />
 
-      <div className={styles.showmore} onClick={() => setPage(page + 1)}>
-        <Button large>Show more</Button>
+      <div className={styles.showmore}>
+        <Button large onClick={() => setPage(page + 1)}>
+          Show more
+        </Button>
       </div>
     </div>
   );
