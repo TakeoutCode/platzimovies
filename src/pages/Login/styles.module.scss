@@ -1,0 +1,67 @@
+@use "@styles/styles.scss" as *;
+
+.Login {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 50px);
+  padding: 24px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 90%;
+    height: 350px;
+    max-width: 768px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: $purple-dark-2;
+    font-weight: $font-weight-title1;
+    font-family: $font-family-titles;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    height: 5rem;
+    padding-left: 20px;
+    font-size: 1.9rem;
+    color: $purple-medium-2;
+    outline: none;
+    border: 0;
+    border-radius: 8px;
+    background-color: $purple-light-2;
+    box-shadow: 0px 4px 8px rgba(46, 30, 89, 0.2);
+  }
+  &__input::placeholder {
+    color: $purple-medium-1;
+    font-weight: $font-weight-text1;
+  }
+
+  &__text {
+    font-size: 1.9rem;
+    color: $purple-dark-2;
+    a {
+      color: $purple-medium-2;
+    }
+  }
+}
+
+@media only screen and (min-height: 650px) {
+  .Login__container {
+    position: absolute;
+    top: calc((50vh - 50px) - 175px);
+  }
+}
