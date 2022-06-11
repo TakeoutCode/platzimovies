@@ -15,7 +15,6 @@ export const Carousel = ({ title, URL }) => {
   const { dataMovies, loading } = useGetData(URL, user.session_id);
 
   const handleClick = () => {
-    console.log(session_id);
     navigate(`/movie-app/${title.replace(/ /g, "")}`);
   };
   const classFigure = user.success ? "" : styles.session;

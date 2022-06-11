@@ -21,12 +21,9 @@
   align-items: center;
   background-color: $purple-dark-1;
 }
-#movie__image_list {
-  margin-right: 0px;
-}
 
 @media only screen and (min-width: 768px) {
-  .movie__image {
+  #movie__image_list {
     margin-right: 0px;
   }
 }
