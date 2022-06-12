@@ -25,7 +25,7 @@ export const Movie = ({ title, poster_path, id, list }) => {
         <img
           id={idMovie}
           className={styles.movie__image}
-          src={show ? `https://image.tmdb.org/t/p/w200/${poster_path}` : ""}
+          src={show ? `https://image.tmdb.org/t/p/w300/${poster_path}` : ""}
           loading="lazy"
           alt={title}
           ref={element}
