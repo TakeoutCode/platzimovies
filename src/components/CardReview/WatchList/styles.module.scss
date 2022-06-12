@@ -1,0 +1,26 @@
+@use "@styles/styles.scss" as *;
+
+.watchList {
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+  color: $grayDark;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+#watched {
+  color: $blue;
+  animation: watchBeat 0.3s;
+}
+
+@keyframes watchBeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
