@@ -20,21 +20,29 @@ export const Carousel = ({ title, URL }) => {
   const classFigure = user.success ? "" : styles.session;
   return (
     <>
-      <div className={styles.container}>
-        <h2 className={styles.container_title}>{title}</h2>
-        {dataMovies.length >= 20 && (
-          <Button onClick={handleClick}>Show more</Button>
-        )}
-      </div>
-      <figure id={classFigure} className={styles.carousel}>
-        {loading ? (
-          <CardMovieSkeleton />
-        ) : (
-          dataMovies.map((item) => (
-            <Movie key={item.id} list={user.success ? false : true} {...item} />
-          ))
-        )}
-      </figure>
+      {dataMovies.length !== 0 && (
+        <>
+          <div className={styles.container}>
+            <h2 className={styles.container_title}>{title}</h2>
+            {dataMovies.length >= 20 && (
+              <Button onClick={handleClick}>Show more</Button>
+            )}
+          </div>
+          <figure id={classFigure} className={styles.carousel}>
+            {loading ? (
+              <CardMovieSkeleton />
+            ) : (
+              dataMovies.map((item) => (
+                <Movie
+                  key={item.id}
+                  list={user.success ? false : true}
+                  {...item}
+                />
+              ))
+            )}
+          </figure>
+        </>
+      )}
     </>
   );
 };
