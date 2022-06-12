@@ -21,7 +21,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 20%;
   }
 
   &__star {
@@ -41,17 +40,5 @@
     font-size: 1.6rem;
     font-weight: $font-weight-text2;
     margin-top: 1.6rem;
-  }
-}
-
-@keyframes heartBeat {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
   }
 }
