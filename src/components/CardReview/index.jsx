@@ -3,6 +3,7 @@ import { AiFillStar } from "react-icons/ai";
 import { Liked } from "@components/CardReview/Liked";
 import { WatchList } from "@components/CardReview/WatchList";
 import UserContext from "@context/index.jsx";
+import { RatedMovies } from "@components/CardReview/RatedMovies";
 import api from "@utils/axiosPreset";
 
 import styles from "./styles.module.scss";
@@ -10,6 +11,7 @@ import styles from "./styles.module.scss";
 export const CardReview = ({ title, vote_average, overview, id }) => {
   const [like, setLike] = useState(false);
   const [watch, setWatch] = useState(false);
+  const [rated, setRated] = useState(0);
 
   const { user } = useContext(UserContext);
   useEffect(() => {
@@ -19,6 +21,7 @@ export const CardReview = ({ title, vote_average, overview, id }) => {
       );
       setLike(data.favorite);
       setWatch(data.watchlist);
+      setRated(data.rated.value / 2);
     };
 
     if (user.success) {
@@ -35,6 +38,7 @@ export const CardReview = ({ title, vote_average, overview, id }) => {
         </div>
         <Liked id={id} like={like} setLike={setLike} />
         <WatchList id={id} watch={watch} setWatch={setWatch} />
+        <RatedMovies id={id} rated={rated} setRated={setRated} />
       </div>
       <p className={styles.cardReview__resume}>{overview}</p>
     </>
