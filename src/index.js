@@ -8,13 +8,11 @@ import { UserProvider } from "@context/index.jsx";
 import "@styles/styles.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <UserProvider>
-      <HelmetProvider>
-        <Layout>
-          <App />
-        </Layout>
-      </HelmetProvider>
-    </UserProvider>
-  </React.StrictMode>
+  <UserProvider>
+    <HelmetProvider>
+      <Layout>
+        <App />
+      </Layout>
+    </HelmetProvider>
+  </UserProvider>
 );
