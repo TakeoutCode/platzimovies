@@ -16,7 +16,6 @@ export const RatedMovies = ({ rated, setRated, id }) => {
           value: e * 2,
         }
       );
-      console.log(data);
       if (data.success) {
         setRated(e);
       }
@@ -27,7 +26,7 @@ export const RatedMovies = ({ rated, setRated, id }) => {
           value: e,
         }
       );
-      if (data.status_code === 1) {
+      if (data.success) {
         setRated(0);
       }
     }
