@@ -8,14 +8,14 @@ import UserContext from "@context/index.jsx";
 
 import styles from "./styles.module.scss";
 
-export const Carousel = ({ title, URL }) => {
+export const Carousel = ({ title, URL, id }) => {
   const navigate = useNavigate();
   const { user } = useContext(UserContext);
 
   const { dataMovies, loading } = useGetData(URL, user.session_id);
 
   const handleClick = () => {
-    navigate(`/movie-app/${title.replace(/ /g, "")}`);
+    navigate(`/movie-app/${title.replace(/ /g, "")}${id ? `/${id}` : ""}`);
   };
   const classFigure = user.success ? "" : styles.session;
   return (

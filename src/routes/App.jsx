@@ -32,6 +32,15 @@ export const App = () => {
           element={<SearchCategories URL="trending/movie/day" title="Trends" />}
         />
         <Route
+          path="/movie-app/similarmovies/:id"
+          element={
+            <SearchCategories
+              URL="/movie/idMovie/recommendations"
+              title="Similar"
+            />
+          }
+        />
+        <Route
           path="/movie-app/favorites"
           element={
             <PrivateRoute

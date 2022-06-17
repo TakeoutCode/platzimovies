@@ -30,7 +30,11 @@ export const Movie = () => {
         {loading ? <CardReviewSkeleton /> : <CardReview {...dataMovies} />}
 
         <Categories genres={dataMovies.genres} />
-        <Carousel title="Similar movies" URL={`/movie/${id}/recommendations`} />
+        <Carousel
+          title="Similar movies"
+          id={id}
+          URL={`/movie/${id}/recommendations`}
+        />
       </div>
     </div>
   );

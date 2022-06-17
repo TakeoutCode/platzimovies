@@ -14,6 +14,8 @@ export const SearchCategories = ({ URL, title }) => {
   const { name, id } = useParams();
   if (name && id) {
     URL = `discover/movie?with_genres=${id}`;
+  } else if (id) {
+    URL = `/movie/${id}/recommendations`;
   }
 
   const { dataMovies, page, setPage, loading } = useGetData(URL);
