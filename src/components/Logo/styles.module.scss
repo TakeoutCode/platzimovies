@@ -7,16 +7,3 @@
   font-family: $font-family-titles;
   cursor: pointer;
 }
-
-#list {
-  position: absolute;
-  top: 4%;
-  right: 3%;
-}
-
-@media only screen and (min-width: 1440px) {
-  #list {
-    top: 4%;
-    right: calc(50% - 690px);
-  }
-}

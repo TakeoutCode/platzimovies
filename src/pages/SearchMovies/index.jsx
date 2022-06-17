@@ -16,8 +16,10 @@ export const SearchMovies = () => {
   return (
     <div className={`${styles.searchMovies}`}>
       <HelmetLayout title="Search Movies" subtitle="Search" />
-      <ArrowBack id />
-      <Logo list />
+      <div className={styles.containerBack}>
+        <ArrowBack id />
+        <Logo />
+      </div>
 
       <Search />
 

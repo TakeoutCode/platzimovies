@@ -24,8 +24,10 @@ export const SearchCategories = ({ URL, title }) => {
   return (
     <div className={`${styles.searchMovies} category__colorDegradGenre--${id}`}>
       <HelmetLayout title={name} subtitle={name} />
-      <ArrowBack id />
-      <Logo list />
+      <div className={styles.containerBack}>
+        <ArrowBack id />
+        <Logo />
+      </div>
 
       <Category title={title ? title : name} id={id} active />
 
