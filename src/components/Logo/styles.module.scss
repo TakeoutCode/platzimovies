@@ -1,0 +1,22 @@
+@use "@styles/styles.scss" as *;
+
+.Logo {
+  font-size: 3rem;
+  color: $purple-dark-2;
+  font-weight: $font-weight-title1;
+  font-family: $font-family-titles;
+  cursor: pointer;
+}
+
+#list {
+  position: absolute;
+  top: 4%;
+  right: 5%;
+}
+
+@media only screen and (min-width: 1440px) {
+  #list {
+    top: 4%;
+    right: calc(50% - 650px);
+  }
+}

@@ -5,6 +5,7 @@ import { ListMovies } from "@components/ListMovies";
 import { useSearch } from "@hooks/useSearch";
 import { HelmetLayout } from "@components/HelmetLayout";
 import { ArrowBack } from "@components/ArrowBack";
+import { Logo } from "@components/Logo";
 
 import styles from "./styles.module.scss";
 
@@ -16,6 +17,8 @@ export const SearchMovies = () => {
     <div className={`${styles.searchMovies}`}>
       <HelmetLayout title="Search Movies" subtitle="Search" />
       <ArrowBack id />
+      <Logo list />
+
       <Search />
 
       <ListMovies movies={movies} loading={loading} />

@@ -5,6 +5,7 @@ import { Carousel } from "@components/Carousel";
 import { Categories } from "@components/Categories";
 import { Button } from "@elements/Button";
 import { Profile } from "@components/Profile";
+import { Logo } from "@components/Logo";
 import UserContext from "@context/index.jsx";
 
 import styles from "./styles.module.scss";
@@ -17,7 +18,7 @@ export const Home = () => {
   return (
     <div className={styles.home}>
       <div className={styles.home__header}>
-        <h1 className={styles.home_title}>PlatziMovies</h1>
+        <Logo />
         {user.success ? (
           <Profile />
         ) : (
