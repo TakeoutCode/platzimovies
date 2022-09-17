@@ -1,7 +1,4 @@
-@import "@styles/vars/colors-theme-primary";
-@import "@styles/vars/colors-theme-secondary";
-@import "@styles/vars/typography";
-@import "@styles/vars/class-category";
+@use '@styles/vars.scss' as *;
 
 html {
   font-size: 62.5%;
